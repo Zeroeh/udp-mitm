@@ -7,7 +7,7 @@ Intercept = the machine offering the tethered internet connection to the host. T
 If you do not understand the above 2 concepts or want to see visually, please see "diagram1.png" in the repo
 
 (These notes are currently linux specific. Other OS details will come soon when I get more testing done)
-1. Set up the intercept and host machines by going to ethernet settings and sharing the connection. See how to do this [here](https://askubuntu.com/questions/359856/share-wireless-internet-connection-through-ethernet) or [here](https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router) or you can just google "linux share internet connection through ethernet"
+1. Set up the intercept and host machines by going to ethernet settings and sharing the connection. See how to do this [here](https://askubuntu.com/questions/359856/share-wireless-internet-connection-through-ethernet) or [here](https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router), or you can just google "linux share internet connection through ethernet"
 2. If the above instructions from the links dont work, try deleting *ALL* ethernet profiles on both intercept and host machines and trying step 1 again.
 3. On the host machine, shut off or disconnect from wifi and see if you can get internet, if not, refer to step 2 again. If it succeeds, continue.
 Note: set the dstport for both scripts to "123" (NTP)
