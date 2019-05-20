@@ -1,0 +1,1 @@
+iptables -t nat -A PREROUTING -p udp --src 10.42.0.0/24 --dport 123 -j DNAT --to-destination 10.42.0.1:5555
