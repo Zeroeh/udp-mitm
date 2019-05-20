@@ -1,5 +1,5 @@
 # udp-mitm
-Using NAT to MITM specific UDP traffic for traffic shaping purposes
+Using NAT to MITM specific UDP traffic for traffic shaping purposes. The intent of this was to capture udp packets externally and edit them before they reach their destination.
 
 # Instructions
 Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
@@ -8,3 +8,8 @@ If you do not understand the above 2 concepts or want to see visually, please se
 
 1. 
 
+# Issues
+- Still need to get the bash script working
+
+# Todo
+- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?)
