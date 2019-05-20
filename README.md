@@ -32,6 +32,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 # Issues
 - Still need to get the bash script working
 - The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
+- The current implementation works flawlessly, but see the todo section as to why it's not perfect.
 
 # Todo
-- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). If anyone knows a fix or workaround, submit an issue or pull request. The contribution will be greatly appreciated.
+- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). Having this method would be ideal as no anticheat would be able to read firewall rules. If anyone knows a fix or workaround, submit an issue or pull request. The contribution will be greatly appreciated.
