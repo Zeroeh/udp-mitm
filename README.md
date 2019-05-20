@@ -34,4 +34,4 @@ If you do not understand the above 2 concepts or want to see visually, please se
 - The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
 
 # Todo
-- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?)
+- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). If anyone knows a fix or workaround, submit an issue or pull request. The contribution will be greatly appreciated.
