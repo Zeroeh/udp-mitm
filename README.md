@@ -13,6 +13,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 - Note: set the dstport for both scripts to "123" (NTP)
 4. On the intercept machine, run the "intercept-setup.sh" script. Arguments for this script will be dst port and external ntp server. (You can use the default in the script but you can change it to any ntp server ip)
 5. On the host machine, run the "host-setup.sh" script. Arguments are dst port and dst ip (dst ip is the local ethernet router ip aka your laptop/pi)
+- Note: use ``iptables -t nat -L -n -v`` to double check that the iptables rules were applied.
 6. Start the ``main.go`` NTP server script with ``go run main.go``
 7. Run the python NTP client with ``python3 test_script.py``
 8. If everything works correctly, the python script should print out "Time = ..." repeatedly every 20 seconds. If it doesn't work, you'll have to do some debugging on your own, sorry.
