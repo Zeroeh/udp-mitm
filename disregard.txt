@@ -1,0 +1,4 @@
+On machine running the game -> 
+iptables -t nat -A OUTPUT -p udp -d 0/0 --dport 123 -j DNAT --to-destination 10.42.0.1:5555 -> route the traffic to the "routers" application
+On machine acting as the tether ->
+iptables -t nat -A OUTPUT -p udp --sport 123 -j DNAT --to-destination 127.0.0.1:5555 -> reroute the traffic to app
