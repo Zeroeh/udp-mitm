@@ -35,4 +35,4 @@ If you do not understand the above 2 concepts or want to see visually, please se
 - The current implementation works flawlessly, but see the todo section as to why it's not perfect.
 
 # Todo
-- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). Having this method would be ideal as no anticheat would be able to read firewall rules. If anyone knows a fix or workaround (perferrably *without* adding extra hardware), submit an issue or pull request. The contribution will be greatly appreciated.
+- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). Having this method would be ideal as no anticheat would be able to read firewall rules. If anyone knows a fix or workaround (preferrably *without* adding extra hardware), submit an issue or pull request. The contribution will be greatly appreciated.
