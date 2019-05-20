@@ -1,5 +1,5 @@
 # udp-mitm
-Using NAT to MITM specific UDP traffic for traffic shaping purposes. The intent of this was to capture udp packets externally and edit them before they reach their destination.
+Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary purpose of this project is to capture UDP traffic from games and process/edit them before they reach their destination. Since UDP is connectionless, unlike TCP which can be rerouted via hosts file, it needs special handling such as a special NAT routing or an application with a pcap hook to capture and edit the packets en route.
 
 # Instructions
 Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
