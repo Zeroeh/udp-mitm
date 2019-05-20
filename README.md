@@ -21,6 +21,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 # Issues
 - Still need to get the bash script working
 - The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
+- It is currently unknown whether UDP hole punching affects the test applications.
 
 # Todo
 - Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?)
