@@ -1,6 +1,13 @@
 # udp-mitm
 Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary purpose of this project is to capture UDP traffic from games and process/edit them before they reach their destination. Since UDP is connectionless, unlike TCP which can be rerouted via hosts file, it needs special handling such as a special NAT routing or an application with a pcap hook to capture and edit the packets en route.
 
+# Requirements
+- Computer running the target application
+- Computer used as the intercept, this can be a laptop, raspberry pi, or any linux device that can route traffic.
+- Golang
+- Sudo priveleges
+- A working brain, for debugging
+
 # Instructions
 - Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
 - Intercept = the machine offering the tethered internet connection to the host. This machine is running the mitm proxy application.
