@@ -2,8 +2,9 @@
 Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary purpose of this project is to capture UDP traffic from games and process/edit them before they reach their destination. Since UDP is connectionless, unlike TCP which can be rerouted via hosts file, it needs special handling such as a special NAT routing or an application with a pcap hook to capture and edit the packets en route.
 
 # Instructions
-Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
-Intercept = the machine offering the tethered internet connection to the host. This machine is running the mitm proxy application.
+- Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
+- Intercept = the machine offering the tethered internet connection to the host. This machine is running the mitm proxy application.
+
 If you do not understand the above 2 concepts or want to see visually, please see [diagram1.png](https://github.com/Zeroeh/udp-mitm/blob/master/diagram1.png).
 
 (These notes are currently linux specific. Other OS details will come soon when I get more testing done)
@@ -16,7 +17,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 - Note: use ``iptables -t nat -L -n -v`` to double check that the iptables rules were applied.
 6. Start the ``main.go`` NTP server script with ``go run main.go``
 7. Run the python NTP client with ``python3 test_script.py``
-8. If everything works correctly, the python script should print out "Time = ..." repeatedly every 20 seconds. If it doesn't work, you'll have to do some debugging on your own, sorry.
+8. If everything works correctly, the python script should print out "Time = ..." repeatedly every 60 seconds. You can see example outputs in the [success](https://github.com/Zeroeh/udp-mitm/tree/master/success) directory. If it doesn't work, then you are on your own, sorry.
 
 
 # Issues
