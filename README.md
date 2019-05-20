@@ -3,7 +3,7 @@ Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary
 
 # Requirements
 - Computer running the target application
-- Computer used as the intercept, this can be a laptop, raspberry pi, or any linux device that can route traffic.
+- Second computer used as the intercept, this can be a laptop, raspberry pi, or any linux device that can route traffic.
 - Golang
 - Sudo priveleges
 - A working brain, for debugging
