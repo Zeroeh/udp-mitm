@@ -4,7 +4,7 @@ Using NAT to MITM specific UDP traffic for traffic shaping purposes. The intent 
 # Instructions
 Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
 Intercept = the machine offering the tethered internet connection to the host. This machine is running the mitm proxy application.
-If you do not understand the above 2 concepts or want to see visually, please see "diagram1.png" in the repo
+If you do not understand the above 2 concepts or want to see visually, please see [diagram1.png](https://github.com/Zeroeh/udp-mitm/blob/master/diagram1.png).
 
 (These notes are currently linux specific. Other OS details will come soon when I get more testing done)
 1. Set up the intercept and host machines by going to ethernet settings and sharing the connection. See how to do this [here](https://askubuntu.com/questions/359856/share-wireless-internet-connection-through-ethernet) or [here](https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router), or you can just google "linux share internet connection through ethernet"
