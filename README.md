@@ -28,6 +28,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 
 # Issues
 - The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
+- You may experience some cross talk from the intercept coming from your router on heavily used UDP applications. This can be negated by changing the iptables script to use the ethernet interface only.
 
 # Todo
 - Maybe make the bash script a little more user friendly by cutting down the arguments a little bit?
