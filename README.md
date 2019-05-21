@@ -3,7 +3,7 @@ Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary
 
 # Requirements
 - Computer running the target application
-- Second computer used as the intercept, this can be a laptop, raspberry pi, or any linux device that can route traffic.
+- Second computer used as the intercept, this can be a laptop or raspberry pi, as long as it runs linux.
 - Golang
 - Sudo priveleges
 - A working brain, for debugging
@@ -14,7 +14,7 @@ Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary
 
 If you do not understand the above 2 concepts or want to see visually, please see [diagram1.png](https://github.com/Zeroeh/udp-mitm/blob/master/diagram1.png).
 
-(These notes are currently linux specific. Other OS details will come soon when I get more testing done)
+(These notes are linux specific. Other OS details will come soon when I get more testing done)
 
 0. Download the [python test script](https://github.com/Zeroeh/udp-mitm/blob/master/test/test_script.py) to the host machine and the [NTP golang script](https://github.com/Zeroeh/udp-mitm/blob/master/test/main.go) to the intercept. When the steps refer to the bash scripts to run, please look [here](https://github.com/Zeroeh/udp-mitm/blob/master/disregard.txt) for the commands to run. I don't have the bash scripts set up yet.
 1. Set up the intercept and host machines by going to ethernet settings and sharing the connection. See how to do this [here](https://askubuntu.com/questions/359856/share-wireless-internet-connection-through-ethernet) or [here](https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router), or you can just google "linux share internet connection through ethernet"
