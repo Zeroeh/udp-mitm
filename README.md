@@ -2,7 +2,7 @@
 Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary purpose of this project is to capture UDP traffic from games and process/edit them before they reach their destination. Since UDP is connectionless, unlike TCP which can be rerouted via hosts file, it needs special handling such as a special NAT routing or an application with a pcap hook to capture and edit the packets en route.
 
 # Features
-- Stealth. Be able to hide from any anticheat that would otherwise be looking for pcap hooks or firewall rules.
+- Stealth. Be able to hide from any anticheat that would otherwise be looking for pcap hooks, firewall rules, and DNS reroutes (hosts file).
 - You make the rest. The included test application is enough to get started making your hooks / features.
 
 # Requirements
