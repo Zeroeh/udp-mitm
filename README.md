@@ -28,9 +28,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 
 
 # Issues
-- Still need to get the bash script working
 - The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
-- The current implementation works flawlessly, but see the todo section as to why it could be better.
 
 # Todo
-- Figure out how to NAT traffic without touching the hosts firewall/iptable rules (2nd interceptor?). Having this method would be ideal as no anticheat would be able to read firewall rules. If anyone knows a fix or workaround (preferrably *without* adding extra hardware), submit an issue or pull request. The contribution will be greatly appreciated. Edit: I have the fix, just need to do some furthur testing and update the bash script. See disregard2.txt for the fix. Apply that and the other rule for the intercept machine.
+- Maybe make the bash script a little more user friendly by cutting down the arguments a little bit?
