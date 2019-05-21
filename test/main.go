@@ -3,11 +3,18 @@ package main
 import (
 	"fmt"
 	"net"
+	"strings"
+	"time"
 )
 
 var (
-	udpConn *net.UDPConn
-	counts = 0
+	udpListener  *net.UDPConn
+	udpRemoteConn *net.UDPConn
+	laddr         *net.UDPAddr
+	raddr         *net.UDPAddr
+	counts        = 0
+	gamePort      = ":123"
+	gameIP        = "time.apple.com"
 )
 
 func main() {
@@ -15,32 +22,44 @@ func main() {
 	if err != nil {
 		fmt.Println("Error resolving:", err)
 	}
-	udpConn, err = net.ListenUDP("udp", network)
+	udpListener, err = net.ListenUDP("udp", network)
 	if err != nil {
 		fmt.Println("Error starting listener:", err)
 	}
+	raddr, err = net.ResolveUDPAddr("udp", gameIP+gamePort)
+	if err != nil {
+		fmt.Println("Error resolving remote:", err)
+	}
+	go localReader()
 	for {
-		buf := make([]byte, 1024)
-		read, addr, err := udpConn.ReadFromUDP(buf)
+		time.Sleep(60 * time.Second)
+	}
+}
+
+func localReader() {
+	for {
+		var err error
+		var bRead int
+		var addr *net.UDPAddr
+		buf := make([]byte, 8096)
+		bRead, addr, err = udpListener.ReadFromUDP(buf)
 		if err != nil {
-			fmt.Println("Error reading:", err)
+			fmt.Println("Err reading local:", err)
 		}
-		fmt.Println("Got packet from", addr)
-		counts++
-		fmt.Printf("Packet: %d | Buffer: %v\n", counts, buf[:read])
-		fmt.Println("Attempting to forward request...")
-		ntpHost, err := net.ResolveUDPAddr("udp", "time.apple.com:123")
-		fmt.Println("Sending to", ntpHost)
-		udpConn.WriteToUDP(buf[:read], ntpHost)
-		buf2 := make([]byte, 1024)
-		read2, addr2, err := udpConn.ReadFromUDP(buf2)
-		if err != nil {
-			fmt.Println("Error reading packet:", err)
+		if strings.Contains(addr.String(), gamePort) { //forward to local
+			fmt.Println("S2C -> ", buf[:bRead])
+			_, err = udpListener.WriteToUDP(buf[:bRead], laddr)
+			if err != nil {
+				fmt.Println("Err forwarding to local:", err)
+			}
+		} else { //forward to remote
+			laddr = addr //reset so we send to the correct port
+			fmt.Println("C2S -> ", buf[:bRead])
+			_, err = udpListener.WriteToUDP(buf[:bRead], raddr)
+			if err != nil {
+				fmt.Println("Err forwarding to remote:", err)
+			}
 		}
-		fmt.Println("Got NTP response from", addr2)
-		fmt.Println("Data:", buf2[:read2])
-		udpConn.WriteToUDP(buf2[:read2], addr) //send the packet back
-		fmt.Println("Sent the packet back to", addr)
 	}
 }
 
