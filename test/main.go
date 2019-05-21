@@ -14,7 +14,7 @@ var (
 	raddr         *net.UDPAddr
 	counts        = 0
 	gamePort      = ":123"
-	gameIP        = "time.apple.com"
+	gameIP        = "time.apple.com" //use wireshark to grab this from the game server
 )
 
 func main() {
