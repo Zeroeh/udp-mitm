@@ -1,4 +1,6 @@
-On machine running the game -> 
+On machine running the game (THIS IS NO LONGER REQUIRED!!!) -> 
 iptables -t nat -A OUTPUT -p udp -d 0/0 --dport 123 -j DNAT --to-destination 10.42.0.1:5555
+
 On machine acting as the tether ->
 iptables -t nat -A OUTPUT -p udp --sport 123 -j DNAT --to-destination 127.0.0.1:5555
+iptables -t nat -A PREROUTING -p udp --src 10.42.0.0/24 --dport 123 -j DNAT --to-destination 10.42.0.1:5555
