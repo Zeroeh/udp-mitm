@@ -32,3 +32,4 @@ If you do not understand the above 2 concepts or want to see visually, please se
 
 # Todo
 - Maybe make the bash script a little more user friendly by cutting down the arguments a little bit?
+- Make a script that removes the iptable rules.
