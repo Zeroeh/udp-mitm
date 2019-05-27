@@ -10,7 +10,6 @@ Using NAT to MITM specific UDP traffic for traffic shaping purposes. The primary
 - Second computer used as the intercept, this can be a laptop or raspberry pi, as long as it runs linux and has an ethernet port and wifi capabilities.
 - Golang
 - Sudo priveleges
-- A working brain, for debugging
 
 # Instructions
 - Host = the machine running the target game/application. This machine is air gapped and connected via ethernet to the intercept.
