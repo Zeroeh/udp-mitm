@@ -6,8 +6,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 if [[ $# -ne 4 ]]; then
-	echo "This script requires 4 arguments: server game port, mitm port, tether intercept ip, tether intercept ip base cidr"
-	echo "Example: ./%s 16875 5555 10.42.0.1 10.42.0.0/24"
+	echo "This script requires 4 arguments: Application endpoint port, mitm port, tether intercept ip, tether intercept ip base cidr"
+	echo "Example: ./%s 123 5555 10.42.0.1 10.42.0.0/24"
 	echo "Possible intercept IPs: (Usually starts with 10.42.0.x)"
 	ourip=`hostname -I`
 	echo $ourip
