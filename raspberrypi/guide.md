@@ -27,7 +27,7 @@ All commands assume they are being run as root. If a command explicitly has sudo
   * ``sudo echo "1" > /proc/sys/net/ipv4/ip_forward``
   * Open ``/etc/sysctl.conf`` and uncomment the line with ``net.ipv4.ip_forward=1`` if it is not already uncommented.
   
-- Now we need to set up the iptables rules. To make this simple, I've created a setup script that does everything automatically. It can be downloaded [here](https://raw.githubusercontent.com/Zeroeh/udp-mitm/master/raspberrypi/setup.sh). Simply ``wget`` the script and execute it. You might have to ``chmod +x`` to make it executable. Once executed, you should be able to disable wifi in your host machine and get internet via the ethernet from the intercept.
+- Now we need to set up the iptables rules. To make this simple, I've created a setup script that does everything automatically. It can be downloaded [here](https://raw.githubusercontent.com/Zeroeh/udp-mitm/master/raspberrypi/setup.sh). Simply ``wget`` the script and execute it. You might have to ``chmod +x`` to make it executable. Once executed, you should be able to disable wifi in your host machine and get internet via the ethernet from the intercept. If you're able to get internet, reboot the intercept and apply the iptables rules again. If you can't get internet, reboot anyways.
 
 To set up the actual proxy, follow the main guide at the root of the repository. If the host machine can get internet from the intercept, you can skip steps 1 through 3.
 
