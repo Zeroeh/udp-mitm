@@ -31,4 +31,4 @@ All commands assume they are being run as root. If a command explicitly has sudo
 
 To set up the actual proxy, follow the main guide at the root of the repository. If the host machine can get internet from the intercept, you can skip steps 1 through 3.
 
-Any issues? Comments? Requests? Post an issue and I'll look into it.
+Any issues? Comments? Requests? Post an issue and I'll look into it. I wrote this guide based on memory so there very well could be a few issues or errors.
