@@ -8,4 +8,3 @@ fi
 # run through twice for the game im testing, but you can change this to be variable based on program args
 sudo iptables -t nat -D PREROUTING 1 && sudo iptables -t nat -D OUTPUT 1
 sudo iptables -t nat -D PREROUTING 1 && sudo iptables -t nat -D OUTPUT 1
-echo "sudo iptables -t nat -D PREROUTING 1 && sudo iptables -t nat -D OUTPUT 1"
