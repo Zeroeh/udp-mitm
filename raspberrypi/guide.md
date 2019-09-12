@@ -10,7 +10,7 @@ Note that "raspberry pi" and "intercept" will be used interchangeably here on ou
 
 You should be following this guide in root mode by running ``sudo -i``
 
-All commands assume they are being run as root.
+All commands assume they are being run as root. If a command explicitly has sudo added to it, then add the sudo.
 
 - Once you have configured the headless intercept and connected to your desired access point, you need to install a program called "dnsmasq". Run ``apt-get install dnsmasq`` 
 
