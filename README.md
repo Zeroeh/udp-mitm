@@ -35,7 +35,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 7. If everything works correctly, the client script should print out the read buffer repeatedly every 10 seconds. You can see example outputs in the [success](https://github.com/Zeroeh/udp-mitm/tree/master/success) directory. If it doesn't work, then you are on your own, sorry.
 
 # Issues
-- The example python and ntp mitm application stops transmitting packets after a bit. This is probably some protection mechanism on apples end however.
+- The example NTP test applications stop transmitting packets after a bit. This is probably some protection mechanism on apples end however. Other applications that I've tested do not experience this effect.
 - You may experience some cross talk from the intercept coming from your router on heavily used UDP applications. This can be negated by changing the iptables script to use the ethernet interface only.
 
 # Todo
