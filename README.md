@@ -23,10 +23,10 @@ If you do not understand the above 2 concepts or want to see visually, please se
 3. On the host machine, shut off or disconnect from wifi and see if you can get internet, if not, refer to step 2 again. If it succeeds, continue. (you can use ifconfig to see which IP addresses are assigned to eth0, which they should be if everything is working)
 
 4. On the intercept machine, run the "start_reroute.sh" script. Arguments for this script will be:
- - Remote application port (dst)
- - Local MITM port (local)
- - Intercept IP on ethernet (host)
- - Intercept IP base address in cidr notation.
+    - Remote application port (dst)
+    - Local MITM port (local)
+    - Intercept IP on ethernet (host)
+    - Intercept IP base address in cidr notation.
  
  (example: ``sudo ./start_reroute.sh 123 5555 10.42.0.1 10.42.0.0/24``) If the script doesn't work, you may need to make it executable. (``chmod +x start_reroute.sh``)
 - Note: use ``iptables -t nat -L -n -v`` to double check that the iptables rules were applied. There should be a rule in OUTPUT and a rule in PREROUTING.
