@@ -16,6 +16,3 @@ fi
 
 sudo iptables -t nat -A OUTPUT -p udp --sport $1 -j DNAT --to-destination 127.0.0.1:$2
 sudo iptables -t nat -A PREROUTING -p udp --src $4 --dport $1 -j DNAT --to-destination $3:$2
-echo "sudo iptables -t nat -A OUTPUT -p udp --sport $1 -j DNAT --to-destination 127.0.0.1:$2"
-echo "sudo iptables -t nat -A PREROUTING -p udp --src $4 --dport $1 -j DNAT --to-destination $3:$2"
-echo "Everything looks good here. Time to play some games :)"
