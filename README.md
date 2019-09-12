@@ -35,4 +35,4 @@ If you do not understand the above 2 concepts or want to see visually, please se
 
 # Todo
 - Maybe make the bash script a little more user friendly by cutting down the arguments a little bit?
-- Make a "cleanup" script that removes the iptable rules.
+- Add args to the cleanup script for looping the amount of times to cleanup rules. (Smarter cleanup script)
