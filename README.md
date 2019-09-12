@@ -21,7 +21,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
 1. Set up the intercept and host machines by going to ethernet settings and sharing the connection. See how to do this [here](https://askubuntu.com/questions/359856/share-wireless-internet-connection-through-ethernet) or [here](https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router), or you can just google "linux share internet connection through ethernet". For a raspberry pi tutorial, see [here](https://github.com/Zeroeh/udp-mitm/blob/master/raspberrypi/guide.md)
 2. If the above instructions from the links dont work, try deleting *ALL* ethernet profiles on both intercept and host machines and trying step 1 again. If it still doesn't work, try flushing the iptables with ``iptables --flush && iptables -t nat --flush`` on the intercept and reboot. If it *still* doesn't work, you *may* need to enable ipv4 forwarding on the intercept. You can do this with ``sudo sysctl net.ipv4.ip_forward=1`` which *should* apply every reboot and to apply the change immediately do ``sudo echo "1" > /proc/sys/net/ipv4/ip_forward``.
 3. On the host machine, shut off or disconnect from wifi and see if you can get internet, if not, refer to step 2 again. If it succeeds, continue. (you can use ifconfig to see which IP addresses are assigned to eth0, which they should be if everything is working)
-- Note: set the dstport for the script to "123" (NTP)
+
 4. On the intercept machine, run the "start_reroute.sh" script. Arguments for this script will be:
  - Remote application port (dst)
  - Local MITM port (local)
