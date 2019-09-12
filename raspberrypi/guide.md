@@ -33,6 +33,10 @@ To set up the actual proxy, follow the main guide at the root of the repository.
 
 Any issues? Comments? Requests? Post an issue and I'll look into it. I wrote this guide based on memory so there very well could be a few issues or errors.
 
-# TODO
-- Add a guide about making the setup.sh script run at boot
+# Getting setup.sh to run at boot
+It is extremely annoying to have to run the setup script to apply the iptables rules after each reboot. Especially if you dont have the luxury of a USB TTY cable to make things quick.
+
+- To run the script at boot, open up ``/etc/rc.local`` and at the end of the file, but before the ``exit 0`` line, add the command to run your script. Mine is ``./root/route_scripts/setup.sh``
+- Reboot and see if you are able to get internet on the host without manually running the setup script.
+
 
