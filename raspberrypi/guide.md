@@ -4,6 +4,8 @@ This guide assumes you have good knowledge and competence of linux and the comma
 
 This guide also assumes you know how to get the raspberry pi all configured so that you can login via ssh.
 
+The raspbian version used in this guide was ``2019-04-08-raspbian-stretch-lite`` and was updated to kernel ``4.19.66-v7+`` after updating packages.
+
 Note that "raspberry pi" and "intercept" will be used interchangeably here on out.
 
 You should be following this guide in root mode by running ``sudo -i``
@@ -25,4 +27,8 @@ All commands assume they are being run as root.
   * ``sudo echo "1" > /proc/sys/net/ipv4/ip_forward``
   * Open ``/etc/sysctl.conf`` and uncomment the line with ``net.ipv4.ip_forward=1`` if it is not already uncommented.
   
-  
+- Now we need to set up the iptables rules. To make this simple, I've created a setup script that does everything automatically. It can be downloaded [here](https://raw.githubusercontent.com/Zeroeh/udp-mitm/master/raspberrypi/setup.sh). Simply ``wget`` the script and execute it. You might have to ``chmod +x`` to make it executable. Once executed, you should be able to disable wifi in your host machine and get internet via the ethernet from the intercept.
+
+To set up the actual proxy, follow the main guide at the root of the repository. If the host machine can get internet from the intercept, you can skip steps 1 through 3.
+
+Any issues? Comments? Requests? Post an issue and I'll look into it.
