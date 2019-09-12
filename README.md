@@ -28,7 +28,7 @@ If you do not understand the above 2 concepts or want to see visually, please se
  - Intercept IP on ethernet (host)
  - Intercept IP base address in cidr notation.
  
- (example: ``sudo ./start_reroute.sh 5056 5555 10.42.0.1 10.42.0.0/24``) If the script doesn't work, you may need to make it executable. (``chmod +x start_reroute.sh``)
+ (example: ``sudo ./start_reroute.sh 123 5555 10.42.0.1 10.42.0.0/24``) If the script doesn't work, you may need to make it executable. (``chmod +x start_reroute.sh``)
 - Note: use ``iptables -t nat -L -n -v`` to double check that the iptables rules were applied. There should be a rule in OUTPUT and a rule in PREROUTING.
 5. Start the NTP server on the intercept with ``go run ntp_proxy.go``
 6. Run the NTP client on the host with ``go run ntp_client.go``
