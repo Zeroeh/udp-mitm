@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	udpListener  *net.UDPConn
+	udpListener   *net.UDPConn
 	udpRemoteConn *net.UDPConn
 	laddr         *net.UDPAddr
 	raddr         *net.UDPAddr
